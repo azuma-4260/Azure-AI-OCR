@@ -4,14 +4,14 @@ import PyPDF2
 
 # 入力PDFファイルのパスと出力PDFファイルのパスを指定します
 documents_path = Path("Documents")  # ドキュメントフォルダのパス
-input_pdf_path = documents_path / "NYSE_ETN_2023.pdf"  # 対象のPDFファイル
+input_pdf_path = documents_path / "Annual_Report.pdf"  # 対象のPDFファイル
 # 入力ファイルの名前に "_extracted" を追加した出力ファイルパスを作成
 output_pdf_path = input_pdf_path.with_stem(input_pdf_path.stem + "_extracted")
 
 # 抽出するページの範囲を設定します（例：1ページ目〜5ページ目）
 # ※ PyPDF2ではページ番号は0からカウントされるため、実際のページ番号から1を引いて調整します。
-start_page = 34  # 人間が数えるページ番号（1ページ目）
-end_page = 35  # 終了ページ（このページも含む）
+start_page = 1  # 人間が数えるページ番号（1ページ目）
+end_page = 50  # 終了ページ（このページも含む）
 
 # PDFファイルをバイナリ読み込みモードで開きます
 with open(input_pdf_path, "rb") as infile:

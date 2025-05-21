@@ -14,7 +14,7 @@ AZURE_ENDPOINT = os.getenv("AZURE_ENDPOINT")
 AZURE_KEY = os.getenv("AZURE_KEY")
 
 # === 入力PDFと出力Excel ===
-input_pdf_path = Path("Documents/NYSE_ETN_2023_extracted.pdf")
+input_pdf_path = Path("Documents/UBS_AG_Standalone_2024_extracted.pdf")
 output_excel_path = Path("outputs") / (input_pdf_path.stem + ".xlsx")
 os.makedirs(output_excel_path.parent, exist_ok=True)
 
